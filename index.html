@@ -5,90 +5,221 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>PNN Group</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background: #f5f5f5;
+      background: #fff;
       color: #333;
-      padding: 20px;
     }
-    header, nav, main, section, footer { margin-bottom: 20px; }
+    header {
+      background: #fff;
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+    }
+    header img.logo {
+      height: 50px;
+    }
     nav a {
-      margin-right: 12px;
+      margin-left: 20px;
       text-decoration: none;
-      color: #0077cc;
+      color: #333;
       font-weight: 500;
     }
-    nav a:hover { text-decoration: underline; }
+    nav a:hover {
+      color: #e63946;
+    }
+    .welcome {
+      text-align: center;
+      padding: 50px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .welcome h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    .welcome p {
+      color: #666;
+      font-size: 16px;
+    }
     .values {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
-      gap: 16px;
-      margin: 16px 0;
+      gap: 30px;
+      margin: 40px auto;
+      max-width: 900px;
     }
     .value {
-      flex: 1 1 calc(20% - 16px);
-      background: white;
-      padding: 12px;
-      border-radius: 4px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
       font-size: 14px;
     }
-    .news, .contact {
-      background: white;
-      padding: 16px;
-      border-radius: 4px;
+    .value img {
+      height: 40px;
+      display: block;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+    .news {
+      background: #f9f9f9;
+      padding: 40px 20px;
+    }
+    .news h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    footer { text-align: center; font-size: 14px; color: #666; }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card .content {
+      padding: 15px;
+    }
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 30px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .footer-left {
+      max-width: 300px;
+    }
+    .footer-left img {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .footer-column h4 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .footer-column a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    .footer-column a:hover {
+      color: #e63946;
+    }
+    .footer-bottom {
+      background: #e63946;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to PNN Group</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About PNN</a>
-      <a href="#">Our Services</a>
-      <a href="#">Media Centre</a>
-      <a href="#">Community Relations</a>
-      <a href="#">Careers</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <section class="intro">
-      <p>PNN is a pan-African technology service provider that began operations out of Nigeria in 1998, playing a significant role in the communications and power sectors of the economy. We have since grown into a group focused on the sales, deployment and management of communications and power infrastructure, renewable energy solutions, and consultancy services.</p>
-    </section>
-    <section class="values">
-      <div class="value">PATRIOTISM</div>
-      <div class="value">RELIABILITY</div>
-      <div class="value">INTEGRITY</div>
-      <div class="value">COMMITMENT</div>
-      <div class="value">ENTREPRENEURSHIP</div>
-    </section>
-    <section class="news">
-      <h2>Latest News</h2>
-      <ul>
-        <li>Community Relations – Feb 28, 2015</li>
-        <li>Community Relations Policy – Feb 28, 2015</li>
-        <li>PNN Introduces Business Incubation Services – Aug 22, 2012</li>
-        <li>PNN Partners With NAPTIN to Provide Renewable Energy Capacity Building – Aug 22, 2012</li>
-        <li>PNN Repositions For Next Decade – Aug 22, 2012</li>
-        <li>PNN Invests in UK Company to Manufacture Energy Efficient Lighting – Mar 11, 2011</li>
-      </ul>
-    </section>
-    <section class="contact">
-      <h2>Contact Us</h2>
-      <p>PNN House, 1 Oremeji Street, Off Obanle-Aro Avenue, Ilupeju, Lagos 100252, Nigeria</p>
-      <p>+234 909 080 0800 | +234 906 046 8524</p>
-      <p>info@pnngroup.net</p>
-    </section>
-  </main>
-  <footer>
-    © 2017 PNN Group. All rights reserved.
-  </footer>
+
+<header>
+  <img src="88d.jpg" alt="PNN Logo" class="logo">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About PNN</a>
+    <a href="#">Our Services</a>
+    <a href="#">Media Centre</a>
+    <a href="#">Community Relations</a>
+    <a href="#">Careers</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="welcome">
+  <h1>Welcome</h1>
+  <p>PNN is a pan-African technology service provider that began operations out of Nigeria in 1998, playing a significant role in the communications and power sectors of the economy. We have since grown into a group of companies focused on the sales, deployment and management of communications and power infrastructure, renewable and alternative energy solutions and consultancy services.</p>
+</section>
+
+<section class="values">
+  <div class="value"><img src="patriotism-icon.png" alt="">PATRIOTISM</div>
+  <div class="value"><img src="reliability-icon.png" alt="">RELIABILITY</div>
+  <div class="value"><img src="integrity-icon.png" alt="">INTEGRITY</div>
+  <div class="value"><img src="commitment-icon.png" alt="">COMMITMENT</div>
+  <div class="value"><img src="entrepreneurship-icon.png" alt="">ENTREPRENEURSHIP</div>
+</section>
+
+<section class="news">
+  <h2>Latest news</h2>
+  <div class="news-grid">
+    <div class="card">
+      <img src="99d.jpg" alt="Community Relations">
+      <div class="content">
+        <h3>Community Relations</h3>
+        <p>PNN is strongly committed to the development of the communities in which we do business...</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="101010d.jpg" alt="Community Relations Policy">
+      <div class="content">
+        <h3>Community Relations Policy</h3>
+        <p>We strive to deliver all our projects on time and within budget by integrating community...</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="satellite.jpg" alt="Business Incubation Services">
+      <div class="content">
+        <h3>PNN Introduces Business Incubation Services</h3>
+        <p>Lagos, Nigeria – PNN, a leading pan-African technology service provider...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">
+    <img src="88d.jpg" alt="PNN Logo">
+    <p>PNN is a pan-African technology service provider that began operations out of Nigeria in 1998, playing a significant role in the communications and power sectors of the economy.</p>
+  </div>
+  <div class="footer-column">
+    <h4>Contact Us</h4>
+    <p>PNN House, 1 Oremeji Street, Off Obanle-Aro Avenue, Ilupeju, Lagos, Nigeria</p>
+    <p>+234 909 080 0800</p>
+    <p>+234 906 046 8524</p>
+    <p>info@pnngroup.net</p>
+  </div>
+  <div class="footer-column">
+    <h4>Quick Links</h4>
+    <a href="#">About the Company</a>
+    <a href="#">Careers</a>
+    <a href="#">Media Centre</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  © 2017 PNN Group. All rights reserved.
+</div>
+
 </body>
 </html>
